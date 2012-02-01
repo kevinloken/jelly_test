@@ -9,10 +9,21 @@
 
 // When you import this file, you import all the cocos2d classes
 #import "cocos2d.h"
+#import "World.h"
+#import "ClosedShape.h"
+#import "Body.h"
+#import "FallingBody.h"
 
 // HelloWorldLayer
 @interface HelloWorldLayer : CCLayer
 {
+    World* _world;
+    ClosedShape* _groundShape;
+    Body* _groundBody;
+    
+    NSMutableArray* _bodies;
+    NSMutableArray* _shapes;
+    
 }
 
 // returns a CCScene that contains the HelloWorldLayer as the only child
