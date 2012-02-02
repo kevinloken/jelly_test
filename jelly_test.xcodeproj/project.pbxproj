@@ -7,7 +7,6 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		6A8DE43514D9C9750031A740 /* libjelly.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 6A0CAF0514D9C67000BB3AEE /* libjelly.a */; };
 		6A8DE46B14D9D2B90031A740 /* libstdc++.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = 6A8DE46A14D9D2B90031A740 /* libstdc++.dylib */; };
 		6AEF4E2F14D9C27300BB85CC /* QuartzCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6AEF4E2E14D9C27300BB85CC /* QuartzCore.framework */; };
 		6AEF4E3114D9C27300BB85CC /* OpenGLES.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6AEF4E3014D9C27300BB85CC /* OpenGLES.framework */; };
@@ -127,25 +126,18 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
-		6A0CAF0414D9C67000BB3AEE /* PBXContainerItemProxy */ = {
+		6AB8048C14DAF31000D25541 /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
-			containerPortal = 6A0CAF0014D9C67000BB3AEE /* jelly.xcodeproj */;
+			containerPortal = 6AB8048514DAF31000D25541 /* jelly.xcodeproj */;
 			proxyType = 2;
 			remoteGlobalIDString = 6A91E18C14D9C04B00A6D61C;
-			remoteInfo = jelly;
-		};
-		6A0CAF0614D9C67B00BB3AEE /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = 6A0CAF0014D9C67000BB3AEE /* jelly.xcodeproj */;
-			proxyType = 1;
-			remoteGlobalIDString = 6A91E18B14D9C04B00A6D61C;
 			remoteInfo = jelly;
 		};
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
-		6A0CAF0014D9C67000BB3AEE /* jelly.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = jelly.xcodeproj; path = ../jelly/jelly.xcodeproj; sourceTree = "<group>"; };
 		6A8DE46A14D9D2B90031A740 /* libstdc++.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = "libstdc++.dylib"; path = "usr/lib/libstdc++.dylib"; sourceTree = SDKROOT; };
+		6AB8048514DAF31000D25541 /* jelly.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = jelly.xcodeproj; path = ../jelly_physics/jelly.xcodeproj; sourceTree = "<group>"; };
 		6AEF4E2A14D9C27300BB85CC /* jelly_test.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = jelly_test.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		6AEF4E2E14D9C27300BB85CC /* QuartzCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = QuartzCore.framework; path = System/Library/Frameworks/QuartzCore.framework; sourceTree = SDKROOT; };
 		6AEF4E3014D9C27300BB85CC /* OpenGLES.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = OpenGLES.framework; path = System/Library/Frameworks/OpenGLES.framework; sourceTree = SDKROOT; };
@@ -389,7 +381,6 @@
 			buildActionMask = 2147483647;
 			files = (
 				6A8DE46B14D9D2B90031A740 /* libstdc++.dylib in Frameworks */,
-				6A8DE43514D9C9750031A740 /* libjelly.a in Frameworks */,
 				6AEF4E2F14D9C27300BB85CC /* QuartzCore.framework in Frameworks */,
 				6AEF4E3114D9C27300BB85CC /* OpenGLES.framework in Frameworks */,
 				6AEF4E3314D9C27300BB85CC /* OpenAL.framework in Frameworks */,
@@ -411,10 +402,10 @@
 			name = physics;
 			sourceTree = "<group>";
 		};
-		6A0CAF0114D9C67000BB3AEE /* Products */ = {
+		6AB8048614DAF31000D25541 /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				6A0CAF0514D9C67000BB3AEE /* libjelly.a */,
+				6AB8048D14DAF31000D25541 /* libjelly.a */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -422,7 +413,7 @@
 		6AEF4E1F14D9C27200BB85CC = {
 			isa = PBXGroup;
 			children = (
-				6A0CAF0014D9C67000BB3AEE /* jelly.xcodeproj */,
+				6AB8048514DAF31000D25541 /* jelly.xcodeproj */,
 				6AEF4E3E14D9C27300BB85CC /* jelly_test */,
 				6AEF4E2D14D9C27300BB85CC /* Frameworks */,
 				6AEF4E2B14D9C27300BB85CC /* Products */,
@@ -813,7 +804,6 @@
 			buildRules = (
 			);
 			dependencies = (
-				6A0CAF0714D9C67B00BB3AEE /* PBXTargetDependency */,
 			);
 			name = jelly_test;
 			productName = jelly_test;
@@ -840,8 +830,8 @@
 			projectDirPath = "";
 			projectReferences = (
 				{
-					ProductGroup = 6A0CAF0114D9C67000BB3AEE /* Products */;
-					ProjectRef = 6A0CAF0014D9C67000BB3AEE /* jelly.xcodeproj */;
+					ProductGroup = 6AB8048614DAF31000D25541 /* Products */;
+					ProjectRef = 6AB8048514DAF31000D25541 /* jelly.xcodeproj */;
 				},
 			);
 			projectRoot = "";
@@ -852,11 +842,11 @@
 /* End PBXProject section */
 
 /* Begin PBXReferenceProxy section */
-		6A0CAF0514D9C67000BB3AEE /* libjelly.a */ = {
+		6AB8048D14DAF31000D25541 /* libjelly.a */ = {
 			isa = PBXReferenceProxy;
 			fileType = archive.ar;
 			path = libjelly.a;
-			remoteRef = 6A0CAF0414D9C67000BB3AEE /* PBXContainerItemProxy */;
+			remoteRef = 6AB8048C14DAF31000D25541 /* PBXContainerItemProxy */;
 			sourceTree = BUILT_PRODUCTS_DIR;
 		};
 /* End PBXReferenceProxy section */
@@ -988,14 +978,6 @@
 		};
 /* End PBXSourcesBuildPhase section */
 
-/* Begin PBXTargetDependency section */
-		6A0CAF0714D9C67B00BB3AEE /* PBXTargetDependency */ = {
-			isa = PBXTargetDependency;
-			name = jelly;
-			targetProxy = 6A0CAF0614D9C67B00BB3AEE /* PBXContainerItemProxy */;
-		};
-/* End PBXTargetDependency section */
-
 /* Begin XCBuildConfiguration section */
 		6AEF4F9A14D9C27500BB85CC /* Debug */ = {
 			isa = XCBuildConfiguration;
@@ -1044,7 +1026,7 @@
 				GCC_PREFIX_HEADER = jelly_test/Prefix.pch;
 				"GCC_THUMB_SUPPORT[arch=armv6]" = "";
 				GCC_VERSION = com.apple.compilers.llvmgcc42;
-				HEADER_SEARCH_PATHS = "$(SRCROOT)/../jelly/jelly";
+				HEADER_SEARCH_PATHS = "$(SRCROOT)/../jelly_physics/jelly";
 				INFOPLIST_FILE = jelly_test/Resources/Info.plist;
 				OTHER_LDFLAGS = "-lz";
 				PRODUCT_NAME = "$(TARGET_NAME)";
@@ -1063,7 +1045,7 @@
 				GCC_PREFIX_HEADER = jelly_test/Prefix.pch;
 				"GCC_THUMB_SUPPORT[arch=armv6]" = "";
 				GCC_VERSION = com.apple.compilers.llvmgcc42;
-				HEADER_SEARCH_PATHS = "$(SRCROOT)/../jelly/jelly";
+				HEADER_SEARCH_PATHS = "$(SRCROOT)/../jelly_physics/jelly";
 				INFOPLIST_FILE = jelly_test/Resources/Info.plist;
 				OTHER_LDFLAGS = "-lz";
 				PRODUCT_NAME = "$(TARGET_NAME)";
