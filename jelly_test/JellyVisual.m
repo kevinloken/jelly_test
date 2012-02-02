@@ -44,19 +44,20 @@
     
 	// calculate triangle fan segments
     
-	segmentPos[ 0 ] = CGPointZero;
     // get relative position and multiply for scale
     CGPoint pos = [_jelly position];
+	segmentPos[ 0 ] = pos; // CGPointZero;
+
     
     for ( int count = 0; count < BLOB_SEGMENTS; ++count ) {
-        segmentPos[ count + 1 ] = ccpMult( [_shape vertex:count], BLOB_SKIN_SCALE );
+        segmentPos[ count + 1 ] = ccpMult( [_jelly vertex:count], BLOB_SKIN_SCALE );
     }
     segmentPos[ BLOB_SEGMENTS + 1 ] = segmentPos[ 1 ];
     
 	// move to absolute position
 	for ( int count = 0; count < ( BLOB_SEGMENTS + 2 ); count ++ )
     {
-		segmentPos[ count ] = ccpAdd( pos, segmentPos[ count ] );
+		// segmentPos[ count ] = ccpAdd( pos, segmentPos[ count ] );
     }
     
 	// remap skin

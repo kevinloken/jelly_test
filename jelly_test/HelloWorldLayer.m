@@ -125,14 +125,16 @@
     FallingBody* body = [[[FallingBody alloc] initWithWorld:_world 
                                                      shape:shape
                                               massPerPoint:1.f
+                          gasPressure:10.0f shapeK:100.0f shapeD:10.0f  
                                                edgeSpringK:300.f
                                             edgeSpringDamp:10.f
                                                   position: ccp(touchLocation.x, touchLocation.y)
                                             angleInRadians:0.0f
-                                                     scale:ccp(1.0f,1.0f)] autorelease];
+                                                     scale:ccp(1.0f,1.0f)
+                                                  kinematic: NO] autorelease];
     
-    [body addInternalSpring:0 pointB:2 springK:400.f damping:12.f];
-    [body addInternalSpring:1 pointB:3 springK:400.f damping:12.f];
+    // [body addInternalSpring:0 pointB:2 springK:400.f damping:12.f];
+    // [body addInternalSpring:1 pointB:3 springK:400.f damping:12.f];
     
     JellyVisual* jelly = [[JellyVisual alloc] initWithJelly:body andShape:shape];
     [self addChild:jelly];

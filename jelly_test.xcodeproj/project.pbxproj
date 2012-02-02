@@ -8,7 +8,9 @@
 
 /* Begin PBXBuildFile section */
 		6A8DE46B14D9D2B90031A740 /* libstdc++.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = 6A8DE46A14D9D2B90031A740 /* libstdc++.dylib */; };
-		6A8DE48A14D9F4FF0031A740 /* JellyVisual.m in Sources */ = {isa = PBXBuildFile; fileRef = 6A8DE48914D9F4FF0031A740 /* JellyVisual.m */; };
+		6A8DE48A14D9F4FF0031A740 /* (null) in Sources */ = {isa = PBXBuildFile; };
+		6AC6DDCC14DAF5FE00B45295 /* libjelly.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 6AB8048D14DAF31000D25541 /* libjelly.a */; };
+		6AC6DDCF14DAF65700B45295 /* JellyVisual.m in Sources */ = {isa = PBXBuildFile; fileRef = 6AC6DDCE14DAF65700B45295 /* JellyVisual.m */; };
 		6AEF4E2F14D9C27300BB85CC /* QuartzCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6AEF4E2E14D9C27300BB85CC /* QuartzCore.framework */; };
 		6AEF4E3114D9C27300BB85CC /* OpenGLES.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6AEF4E3014D9C27300BB85CC /* OpenGLES.framework */; };
 		6AEF4E3314D9C27300BB85CC /* OpenAL.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6AEF4E3214D9C27300BB85CC /* OpenAL.framework */; };
@@ -134,11 +136,20 @@
 			remoteGlobalIDString = 6A91E18C14D9C04B00A6D61C;
 			remoteInfo = jelly;
 		};
+		6AC6DDCA14DAF5C500B45295 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 6AB8048514DAF31000D25541 /* jelly.xcodeproj */;
+			proxyType = 1;
+			remoteGlobalIDString = 6A91E18B14D9C04B00A6D61C;
+			remoteInfo = jelly;
+		};
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
 		6A8DE46A14D9D2B90031A740 /* libstdc++.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = "libstdc++.dylib"; path = "usr/lib/libstdc++.dylib"; sourceTree = SDKROOT; };
 		6AB8048514DAF31000D25541 /* jelly.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = jelly.xcodeproj; path = ../jelly_physics/jelly.xcodeproj; sourceTree = "<group>"; };
+		6AC6DDCD14DAF65700B45295 /* JellyVisual.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JellyVisual.h; sourceTree = "<group>"; };
+		6AC6DDCE14DAF65700B45295 /* JellyVisual.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = JellyVisual.m; sourceTree = "<group>"; };
 		6AEF4E2A14D9C27300BB85CC /* jelly_test.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = jelly_test.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		6AEF4E2E14D9C27300BB85CC /* QuartzCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = QuartzCore.framework; path = System/Library/Frameworks/QuartzCore.framework; sourceTree = SDKROOT; };
 		6AEF4E3014D9C27300BB85CC /* OpenGLES.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = OpenGLES.framework; path = System/Library/Frameworks/OpenGLES.framework; sourceTree = SDKROOT; };
@@ -381,6 +392,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				6AC6DDCC14DAF5FE00B45295 /* libjelly.a in Frameworks */,
 				6A8DE46B14D9D2B90031A740 /* libstdc++.dylib in Frameworks */,
 				6AEF4E2F14D9C27300BB85CC /* QuartzCore.framework in Frameworks */,
 				6AEF4E3114D9C27300BB85CC /* OpenGLES.framework in Frameworks */,
@@ -396,13 +408,6 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
-		6A0CAEFD14D9C48E00BB3AEE /* physics */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			name = physics;
-			sourceTree = "<group>";
-		};
 		6AB8048614DAF31000D25541 /* Products */ = {
 			isa = PBXGroup;
 			children = (
@@ -448,14 +453,14 @@
 		6AEF4E3E14D9C27300BB85CC /* jelly_test */ = {
 			isa = PBXGroup;
 			children = (
+				6AC6DDCD14DAF65700B45295 /* JellyVisual.h */,
+				6AC6DDCE14DAF65700B45295 /* JellyVisual.m */,
 				6AEF4F9014D9C27500BB85CC /* AppDelegate.h */,
 				6AEF4F9114D9C27500BB85CC /* AppDelegate.m */,
 				6AEF4F9314D9C27500BB85CC /* RootViewController.h */,
 				6AEF4F9414D9C27500BB85CC /* RootViewController.m */,
 				6AEF4F9614D9C27500BB85CC /* HelloWorldLayer.h */,
 				6AEF4F9714D9C27500BB85CC /* HelloWorldLayer.m */,
-				6A8DE48814D9F4FF0031A740 /* JellyVisual.h */,
-				6A8DE48914D9F4FF0031A740 /* JellyVisual.m */,
 				6AEF4F9914D9C27500BB85CC /* GameConfig.h */,
 				6AEF4E3F14D9C27300BB85CC /* Resources */,
 				6AEF4E5314D9C27300BB85CC /* libs */,
@@ -806,6 +811,7 @@
 			buildRules = (
 			);
 			dependencies = (
+				6AC6DDCB14DAF5C500B45295 /* PBXTargetDependency */,
 			);
 			name = jelly_test;
 			productName = jelly_test;
@@ -975,11 +981,20 @@
 				6AEF4F9214D9C27500BB85CC /* AppDelegate.m in Sources */,
 				6AEF4F9514D9C27500BB85CC /* RootViewController.m in Sources */,
 				6AEF4F9814D9C27500BB85CC /* HelloWorldLayer.m in Sources */,
-				6A8DE48A14D9F4FF0031A740 /* JellyVisual.m in Sources */,
+				6A8DE48A14D9F4FF0031A740 /* (null) in Sources */,
+				6AC6DDCF14DAF65700B45295 /* JellyVisual.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		6AC6DDCB14DAF5C500B45295 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			name = jelly;
+			targetProxy = 6AC6DDCA14DAF5C500B45295 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
 
 /* Begin XCBuildConfiguration section */
 		6AEF4F9A14D9C27500BB85CC /* Debug */ = {
