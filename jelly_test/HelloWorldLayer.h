@@ -21,9 +21,7 @@
     ClosedShape* _groundShape;
     Body* _groundBody;
     
-    NSMutableArray* _bodies;
-    NSMutableArray* _shapes;
-    
+    NSMutableArray* _jellies;    
 }
 
 // returns a CCScene that contains the HelloWorldLayer as the only child

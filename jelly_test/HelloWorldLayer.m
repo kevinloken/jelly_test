@@ -10,6 +10,7 @@
 // Import the interfaces
 #import "HelloWorldLayer.h"
 #import "FallingBody.h"
+#import "JellyVisual.h"
 
 #define kCoconut 1
 
@@ -72,8 +73,7 @@
 
         self.isTouchEnabled = YES;
         
-        _bodies = [[NSMutableArray alloc] initWithCapacity:10];
-        _shapes = [[NSMutableArray alloc] initWithCapacity:10];
+        _jellies = [[NSMutableArray alloc] initWithCapacity:10];
         
         [self schedule:@selector(update:) interval:1.0f/30.0f];
 	}
@@ -91,8 +91,8 @@
     [_groundShape release];
     [_world release];
     
-    [_bodies release];
-    [_shapes release];
+    [_jellies release];
+
 	// don't forget to call "super dealloc"
 	[super dealloc];
 }
@@ -102,11 +102,6 @@
 {
     for ( int i = 0; i < 4; ++i ) {
         [_world update:1.0f/120.0f];
-    }
-    
-    for ( FallingBody* body in _bodies ) {
-        CCSprite* sprite = (CCSprite*)[self getChildByTag:(int)body];
-        sprite.position = [body position];
     }
 }
 
@@ -127,8 +122,6 @@
     [shape addVertex:ccp(0.f, -spriteHeight)];
     [shape finish];
     
-    [_shapes addObject:shape];
-    
     FallingBody* body = [[[FallingBody alloc] initWithWorld:_world 
                                                      shape:shape
                                               massPerPoint:1.f
@@ -141,11 +134,9 @@
     [body addInternalSpring:0 pointB:2 springK:400.f damping:12.f];
     [body addInternalSpring:1 pointB:3 springK:400.f damping:12.f];
     
-    [_bodies addObject:body];
-
-    sprite.position = touchLocation;
-    sprite.tag = (int)body;
-    [self addChild:sprite];
+    JellyVisual* jelly = [[JellyVisual alloc] initWithJelly:body andShape:shape];
+    [self addChild:jelly];
+    
 }
 
 -(void)ccTouchesBegan:(NSSet *)touches withEvent:(UIEvent *)event 
