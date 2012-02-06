@@ -56,17 +56,17 @@
         // static ground object.
         _groundShape = [[ClosedShape alloc] init];
         [_groundShape begin];
-        [_groundShape addVertex:ccp(-240.f, -2.f)];
-        [_groundShape addVertex:ccp(-240.f, +2.f)];
-        [_groundShape addVertex:ccp(+240.f,+2.f)];
-        [_groundShape addVertex:ccp(+240.f,-2.f)];
+        [_groundShape addVertex:ccp(-240.f, -10.f)];
+        [_groundShape addVertex:ccp(-240.f, +10.f)];
+        [_groundShape addVertex:ccp(+240.f,+10.f)];
+        [_groundShape addVertex:ccp(+240.f,-10.f)];
         [_groundShape finish];
         
         // make the body.
         _groundBody = [[Body alloc] initWithWorld:_world 
                                             shape:_groundShape 
                                      massPerPoint:1000000.0f 
-                                         position:ccp(240.f,160.0f) 
+                                         position:ccp(240.f,0.0f) 
                                    angleInRadians:0.f 
                                             scale:ccp(1.f,1.f) 
                                         kinematic:NO];
@@ -114,12 +114,35 @@
     float spriteWidth = sprite.contentSize.width / 2.0f;
     float spriteHeight = sprite.contentSize.height / 2.0f;
     
+    CGPoint vertices[] = {
+        {-1.5f, 2.0f},
+        {-0.5f, 2.0f},
+        { 0.5f, 2.0f},
+        { 1.5f, 2.0f},
+        { 1.5f, 1.0f},
+        { 0.5f, 1.0f},
+        { 0.5f,-1.0f},
+        { 1.5f,-1.0f},
+        { 1.5f,-2.0f},
+        { 0.5f,-2.0f},
+        {-0.5f,-2.0f},
+        {-1.5f,-2.0f},
+        {-1.5f,-1.0f},
+        {-0.5f,-1.0f},
+        {-0.5f, 1.0f},
+        {-1.5f, 1.0f}
+    };
+        
+    
     ClosedShape* shape = [[[ClosedShape alloc] init] autorelease];
     [shape begin];
-    [shape addVertex:ccp(-spriteWidth, 0.f)];
-    [shape addVertex:ccp(0.f, spriteHeight)];
-    [shape addVertex:ccp(spriteWidth, 0.f)];
-    [shape addVertex:ccp(0.f, -spriteHeight)];
+        for ( int i = 0; i < sizeof(vertices)/sizeof(vertices[0]); ++i ) {
+            [shape addVertex:ccp( vertices[i].x * spriteWidth, vertices[i].y * spriteHeight)];
+        }
+//    [shape addVertex:ccp(-spriteWidth, 0.f)];
+//    [shape addVertex:ccp(0.f, spriteHeight)];
+//    [shape addVertex:ccp(spriteWidth, 0.f)];
+//    [shape addVertex:ccp(0.f, -spriteHeight)];
     [shape finish];
     
     FallingBody* body = [[[FallingBody alloc] initWithWorld:_world 

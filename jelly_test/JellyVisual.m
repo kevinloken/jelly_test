@@ -33,10 +33,12 @@
     [super dealloc];
 }
 
-#define BLOB_SEGMENTS 4
+// #define BLOB_SEGMENTS 4
 #define BLOB_SKIN_SCALE 1.0f
 
 -( void )draw {
+    int BLOB_SEGMENTS = [_jelly vertexCount];
+    
 	CGPoint segmentPos[ BLOB_SEGMENTS + 2 ];
 	CGPoint texturePos[ BLOB_SEGMENTS + 2 ];
 	CGPoint textureCenter;
@@ -81,7 +83,7 @@
 		texturePos[ count ] = ccpAdd( ccpMult( texturePos[ count ], 0.5f ), textureCenter );
     
     
-	glColor4ub( 128, 255, 128, 255 );
+	glColor4ub( 255, 255, 255, 255 );
     
 	glEnable( GL_TEXTURE_2D );
 	glBindTexture( GL_TEXTURE_2D, [ _skin name ] ); 
